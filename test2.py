@@ -1,5 +1,0 @@
-print ("random")
-print ("random")
-print ("random")
-print ("random")
-print ("random")

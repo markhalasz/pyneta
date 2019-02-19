@@ -3,16 +3,16 @@ from getpass import getpass
 
 ios_devices = [
 	{
-	"host": "cisco3.lasthop.io", 
-	"username": "pyclass", 
+	"host": "x", 
+	"username": "x", 
 	"password": getpass(), 
 	"device_type": "cisco_nxos", 
 	#"session_log": "my_session.txt",
 	}
 	# ,
 	#{
-	#"host": "nxos2.lasthop.io",
-        #"username": "pyclass",
+	#"host": "x",
+        #"username": "x",
         #"password": getpass(),
         #"device_type": "cisco_nxos",
 	#}""

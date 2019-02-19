@@ -1,0 +1,9 @@
+---
+- some_string
+- "this is also a string"
+- null
+#Booleans
+- true
+- false
+- yes
+- no

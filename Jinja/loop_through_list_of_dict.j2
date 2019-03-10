@@ -1,0 +1,18 @@
+{%- for vrf in vrf_list %}
+vrf definition {{ vrf.vrf_name }}
+ rd {{ red }}
+ !
+ {%- if ipv4_enabled is defined %}
+ address-family ipv4
+  route-target export {{ vrf.red }}
+  route-target import {{ vrf.red }}
+ exit-address-family
+ {%- endif %}
+ !
+ {%- if ipv6_enabled is defined %}
+ address-family ipv6
+  route-target export {{ vrf.red }}
+  route-target import {{ vrf.red }}
+ exit-address-family
+ {%- endif %}
+{%- endfor &}

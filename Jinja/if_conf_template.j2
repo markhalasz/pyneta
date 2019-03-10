@@ -1,0 +1,8 @@
+ {%- if Exists is defined %}
+ interface {{ Interface }}
+  ip address {{ ip_addr }}/{{ mask }}
+
+ router bgp {{ local_as }}
+  neighbor {{ peer_ip }} remote-as {{ local_as }}
+  addres-fam ipv4 unicast
+ {%- endif %}

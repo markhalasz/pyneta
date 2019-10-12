@@ -1,0 +1,27 @@
+#!/usr/bin/env python
+
+#Pingsweep
+import ipaddress
+import sh
+#sh is shell emulator#
+
+#take user input and convert it to IPv4 format
+print "Give the subnet you want to sweep using the following format: \n 192.168.10.0/24"
+user_input  = raw_input("")
+network = ipaddress.ip_network(unicode(user_input))
+
+
+#create a file for active hosts
+f = open ("hosts.txt", "w+")
+
+
+#run through the network hosts
+for i in network.hosts():
+
+        try:
+                sh.ping(i, "-c 1")
+                print i, "is active"
+                f.write("{host} \n".format(host=i))
+        except sh.ErrorReturnCode_1:
+                print "no response from ", i
+

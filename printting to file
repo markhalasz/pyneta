@@ -1,3 +1,4 @@
 
+f = open ("hosts.txt", "w+")
 for i in something():
   f.write("\n {host}".format(host=i))

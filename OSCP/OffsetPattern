@@ -5,7 +5,6 @@ import sys
 
 
 shellcode = "pattern created here"
-"example: shellcode = "A" * 2003 + "B" *4"
 "Step 1: patter create using: /usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 5900"
 "Step 2: with EIP value from above step do: usr/share/metasploit-framework/tools/exploit/pattern_offset.rb -l 5900 -q <EIP value>"
 
